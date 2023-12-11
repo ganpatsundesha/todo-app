@@ -7,6 +7,7 @@
 body {
     font-size: 24px;
     font-family: "Roboto", sans-serif;
+    background: #eee;
 }
 
 .todo-item {
@@ -17,6 +18,7 @@ body {
 
 .todo-item span {
     width: 100%;
+    text-transform: capitalize;
 }
 
 .todo-item+.todo-item {
@@ -29,6 +31,7 @@ button {
     padding: 5px 10px;
     font-size: 16px;
     white-space: nowrap;
+    font-weight: 600;
 }
 
 .todo-item .d-flex {
@@ -65,4 +68,27 @@ button {
     display: flex;
     align-items: center;
     gap: 24px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 576px) {
+    .todo-item {
+        flex-direction: column;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        margin-top: 16px;
+    }
+
+    .d-flex {
+        gap: 10px;
+    }
 }
